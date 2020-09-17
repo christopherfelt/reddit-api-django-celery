@@ -11,6 +11,8 @@ celery = "*"
 redis = "*"
 psycopg2-binary = "==2.8.4"
 praw = "*"
+djangorestframework = "*"
+django-cors-headers = "*"
 
 [requires]
 python_version = "3.7"
