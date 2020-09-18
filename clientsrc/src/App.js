@@ -1,12 +1,20 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { GlobalProvider } from "./context/GlobalState";
+
+import { Home } from "./components/pages/home";
 
 function App() {
   return (
-    <div className="App">
-      
-    </div>
+
+    <GlobalProvider>
+      <div className="App">
+        <Home />
+      </div>
+    </GlobalProvider>
+
+
   );
 }
 
