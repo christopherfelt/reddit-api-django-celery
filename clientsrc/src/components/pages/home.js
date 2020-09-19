@@ -13,9 +13,10 @@ export const Home = () => {
     return (
         <div>
             <h1>Home is live</h1>
-            {songs.map((song) => (
+            {/* {songs.map((song) => (
                 <p>hello</p>
-            ))}
+            ))} */}
+            {songs}
         </div>
     )
 }
