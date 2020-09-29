@@ -9,7 +9,7 @@ const initialState = {
 };
 
 let api = axios.create({
-    baseUrl: "http://localhost:1337/api/v1/reddit/",
+    baseUrl: "http://127.0.0.1:1337/api/v1/reddit/",
     headers: {
         "Content-type": "application/json"
     },
@@ -23,7 +23,7 @@ export const GlobalProvider = ({ children }) => {
     async function getSongs(){
         
         try {
-            let res = await api.get("");
+            let res = await axios.get("http://127.0.0.1:1337/api/v1/reddit/");
             console.log("made it to api call", res.data)
             dispatch({
                 type: "GET_SONGS",
