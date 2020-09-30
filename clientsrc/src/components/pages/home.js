@@ -1,6 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 
 import { GlobalContext } from "../../context/GlobalState"
+import { Song } from "../song"
 
 export const Home = () => {
 
@@ -13,10 +14,17 @@ export const Home = () => {
 
     return (
         <div>
-            <h1>Home is live</h1>
-            {songs.map((song) => (
-                <h1> {song.name} </h1>
-            ))}
+
+            <div className="container" >
+                <div class="row">
+                    <div className="col d-flex">
+                        {songs.map((song) => (
+                            <Song key={song.id} song={song} />
+                        ))}
+                    </div>
+                </div>
+            </div>
+
 
            
         </div>
